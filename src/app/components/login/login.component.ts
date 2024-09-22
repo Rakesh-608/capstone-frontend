@@ -7,26 +7,18 @@ import { RegisterComponent } from '../register/register.component';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, NgIf, RegisterComponent],
+  imports: [ReactiveFormsModule, FormsModule, NgIf],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  // email: string = '';
-  // password: string = '';
-
-  // constructor(private router: Router) {}
-
-  // onLogin() {
-  //   console.log('Logging in with:', this.email, this.password);
-  //   this.router.navigate(['/user-dashboard']);
-  // }
 
   loginForm: FormGroup;
   errorMessage: string = '';
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     // Initialize the form
+
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
@@ -51,9 +43,7 @@ export class LoginComponent {
     // Implement your login logic here
     console.log('Logging in with:', email, password);
     this.router.navigate(['/user-dashboard'])
-
-    // Redirect or handle post-login logic
-    // this.router.navigate(['/home']); // Uncomment to redirect after login
+    
   }
 
   // Helper methods to get form controls
