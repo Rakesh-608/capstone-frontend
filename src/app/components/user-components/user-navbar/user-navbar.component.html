@@ -1,1 +1,28 @@
-<p>user-navbar works!</p>
+<nav id="sidebar" class="bg-dark text-light p-3">
+    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+      <div class="notification text-light" [ngClass]="{'active': isActive('/home')}" [routerLink]="['/home']" style="cursor: pointer;">
+        <!-- Home Icon -->
+        <i class="bi bi-house-door"></i>
+        <span class="notification-text">Home</span>
+      </div>
+  
+      <div class="notification text-light" [ngClass]="{'active': isActive('/alerts')}" [routerLink]="['/alerts']" style="cursor: pointer;">
+        <!-- Alerts Icon -->
+        <i class="bi bi-bell"></i>
+        <span class="notification-text">View Alerts</span>
+      </div>
+  
+      <div class="notification text-light" [ngClass]="{'active': isActive('/incident-report')}" [routerLink]="['/incident-report']" style="cursor: pointer;">
+        <!-- Incident Report Icon -->
+        <i class="bi bi-file-earmark-text"></i>
+        <span class="notification-text">View Incident Report</span>
+      </div>
+  
+      <div class="notification text-light" [ngClass]="{'active': isActive('/report-incident')}" [routerLink]="['/report-incident']" style="cursor: pointer;">
+        <!-- Report Incident Icon -->
+        <i class="bi bi-exclamation-triangle"></i>
+        <span class="notification-text">Report an Incident</span>
+      </div>
+    </div>
+  </nav>
+  
