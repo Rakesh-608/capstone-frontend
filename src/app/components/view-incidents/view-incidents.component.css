@@ -1,0 +1,30 @@
+/* src/app/components/view-incidents/view-incidents.component.css */
+.incident-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    margin-bottom: 15px;
+  }
+  
+  .card-time,
+  .card-review-status {
+    font-size: 0.9em;
+    color: #666;
+  }
+  

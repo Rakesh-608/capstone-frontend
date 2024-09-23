@@ -14,4 +14,8 @@ export class IncidentService {
   reportIncident(incident: Incident): Observable<any> {
     return this.http.post(this.apiUrl, incident);
   }
+
+  getIncidents(): Observable<Incident[]> {
+    return this.http.get<Incident[]>(this.apiUrl);
+  }
 }

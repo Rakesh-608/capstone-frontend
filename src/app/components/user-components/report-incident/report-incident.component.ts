@@ -15,7 +15,7 @@ export class ReportIncidentComponent {
 
   incident: Incident = {
     location: '',
-    time: new Date().toISOString(),
+    time: new Date(),
     description: '',
     incidentType: '',
     reviewStatus: false  // Default value is set here

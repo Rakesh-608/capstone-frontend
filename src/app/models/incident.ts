@@ -1,6 +1,6 @@
 export interface Incident {
     location: string;
-    time: string;
+    time: Date;
     description: string;
     incidentType: string;
     reviewStatus: boolean;

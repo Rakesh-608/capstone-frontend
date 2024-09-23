@@ -6,6 +6,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { SosPageComponent } from './components/sos-page/sos-page.component';
 import { ReportIncidentComponent } from './components/user-components/report-incident/report-incident.component';
 import { UserDashboardComponent } from './components/user-components/user-dashboard/user-dashboard.component';
+import { ViewIncidentsComponent } from './components/view-incidents/view-incidents.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/landing-page', pathMatch: 'full' },
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'user-dashboard', component: UserDashboardComponent },
     { path: 'sos-page', component: SosPageComponent },
     {path:'alerts',component:AlertsComponent},
-    {path:'report-incident',component:ReportIncidentComponent}
+    {path:'report-incident',component:ReportIncidentComponent},
+    {path:'view-incidents',component:ViewIncidentsComponent}
 ];
