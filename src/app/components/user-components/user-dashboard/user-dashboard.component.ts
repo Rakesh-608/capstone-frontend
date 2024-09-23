@@ -2,11 +2,10 @@ import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { LocationService } from '../../../services/location.service';
 import { UserNavbarComponent } from '../user-navbar/user-navbar.component';
-import { UserTopNavbarComponent } from '../user-top-navbar/user-top-navbar.component';
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [UserNavbarComponent,UserTopNavbarComponent, NgIf],
+  imports: [UserNavbarComponent, NgIf],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.css'
 })

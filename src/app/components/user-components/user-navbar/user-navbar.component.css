@@ -1,5 +1,5 @@
 #sidebar {
-  width: 60px; /* Collapsed width */
+  width: 100px; /* Collapsed width */
   height: 100vh; /* Full viewport height */
   position: fixed; /* Fix to the left side */
   top: 0;
@@ -19,6 +19,15 @@
   opacity: 1.0;
 }
 
+/* ... other sidebar styles ... */
+
+.content-wrapper {
+  transition: margin-left 0.3s ease-in-out;
+}
+
+#sidebar:hover ~ .content-wrapper {
+  margin-left: 200px; /* Adjust for expanded sidebar width */
+}
 /* Notification styles */
 #sidebar .notification {
   margin-top: 20px; /* Space above notification icon */
@@ -124,6 +133,28 @@
 /* Active notification styles */
 .notification.active i,
 .notification.active span {
-  /* color: #007bff !important; Highlight color */
+  color: #08121d !important; 
   font-weight: bold; /* Optional: makes the icon stand out more */
+}
+
+
+.notification i {
+  opacity: 1; /* Show icon when sidebar is hovered */
+  font-size: 1.3rem; /* Increase the icon size when sidebar is expanded */
+}
+ a{
+    color: #fff; /* Ensure link/button text is white */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Make text bold */
+    /* Add padding for clickable area */
+    border-radius: 5px; /* Optional: rounded edges for buttons or links */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+    font-size: 1.5rem;
+}
+
+/* Hover effect for buttons or links */
+#top-navbar a:hover,
+#top-navbar button:hover {
+    /* background-color: #0056b3; Darker blue on hover */
+    color: #fff; /* Ensure text remains white */
 }
