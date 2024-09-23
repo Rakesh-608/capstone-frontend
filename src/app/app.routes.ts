@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { AlertsComponent } from './components/alerts/alerts.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -12,4 +13,5 @@ export const routes: Routes = [
     { path: 'landing-page', component: LandingPageComponent },
     { path: 'user-dashboard', component: UserDashboardComponent },
     { path: 'sos-page', component: SosPageComponent },
+    {path:'alerts',component:AlertsComponent}
 ];

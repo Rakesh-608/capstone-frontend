@@ -1,23 +1,22 @@
 #sidebar {
   width: 60px; /* Collapsed width */
-  height: calc(
-    100vh - 60px
-  ); /* Full viewport height minus the top navbar height */
-  position: fixed; /* Fixed positioning */
-  top: 60px; /* Start below the top navbar */
-  left: 0; /* Align to the left */
-  background-color: #1f98fc !important; /* Sidebar background color */
-  color: rgb(17, 16, 16);
+  height: 100vh; /* Full viewport height */
+  position: fixed; /* Fix to the left side */
+  top: 0;
+  left: 0;
+  background-color: #007bff !important; /* Sidebar background color */
+  color: #fff;
   transition: width 0.3s; /* Smooth transition for width */
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Arrange items in a column */
-  align-items:center; /* Center items horizontally */
+  align-items: center; /* Center items horizontally */
   overflow: hidden; /* Hide overflow */
+  z-index: 999; /* Ensure sidebar stays above other content */
 }
 
 #sidebar:hover {
   width: 200px; /* Expanded width */
-  opacity: 0.9; /* Slight transparency */
+  opacity: 1.0;
 }
 
 /* Notification styles */
@@ -125,6 +124,6 @@
 /* Active notification styles */
 .notification.active i,
 .notification.active span {
-  color: #007bff !important; /* Highlight color */
+  /* color: #007bff !important; Highlight color */
   font-weight: bold; /* Optional: makes the icon stand out more */
 }
