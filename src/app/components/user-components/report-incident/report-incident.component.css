@@ -1,0 +1,79 @@
+/* view-incidents.component.css */
+
+/* General container for the view-incidents component */
+.container {
+  margin-left: 60px; /* Initial margin when the sidebar is collapsed */
+  transition: margin-left 0.3s ease; /* Smooth transition when the sidebar expands */
+  padding: 20px;
+}
+
+/* When the sidebar is hovered, adjust the container margin */
+#sidebar:hover + .container,
+#sidebar:hover ~ .container {
+  margin-left: 200px; /* Adjust margin when the sidebar is expanded */
+}
+
+/* Styling the incident cards container */
+.incident-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Individual card styling */
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: calc(33.333% - 20px); /* Responsive width, 3 cards per row with gap */
+  min-width: 250px; /* Minimum width for smaller screens */
+  transition: all 0.3s ease;
+}
+
+/* Card header styles */
+.card-title {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  color: #007bff;
+}
+
+/* Card body styles */
+.card-subtitle {
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin: 8px 0;
+}
+
+.card-time, .card-review-status {
+  font-size: 0.9em;
+  color: #495057;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0;
+    padding: 10px;
+  }
+  
+  #sidebar:hover + .container,
+  #sidebar:hover ~ .container {
+    margin-left: 200px;
+  }
+  
+  .card {
+    width: calc(50% - 20px); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Full width on small screens */
+  }
+}
