@@ -5,7 +5,7 @@ import { UserNavbarComponent } from '../user-navbar/user-navbar.component';
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [UserNavbarComponent, NgIf],
+  imports: [NgIf,UserNavbarComponent],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.css'
 })

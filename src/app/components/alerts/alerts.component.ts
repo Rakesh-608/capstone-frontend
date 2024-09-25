@@ -3,12 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Alert } from '../../models/alert';
 import { AlertService } from '../../services/alert.service';
 import { UserNavbarComponent } from '../user-components/user-navbar/user-navbar.component';
-import { UserTopNavbarComponent } from '../user-components/user-top-navbar/user-top-navbar.component';
 
 @Component({
   selector: 'app-alerts',
   standalone: true,
-  imports: [UserNavbarComponent,UserTopNavbarComponent, NgFor],
+  imports: [UserNavbarComponent, NgFor],
   templateUrl: './alerts.component.html',
   styleUrl: './alerts.component.css'
 })

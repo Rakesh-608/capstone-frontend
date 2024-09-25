@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { UserNavbarComponent } from '../user-components/user-navbar/user-navbar.component';
 
 @Component({
-  selector: 'app-sos-page',
+  selector: 'app-accident-report',
   standalone: true,
   imports: [UserNavbarComponent],
-  templateUrl: './sos-page.component.html',
-  styleUrl: './sos-page.component.css'
+  templateUrl: './accident-report.component.html',
+  styleUrl: './accident-report.component.css'
 })
-export class SosPageComponent {
+export class AccidentReportComponent {
 
 }

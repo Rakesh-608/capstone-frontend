@@ -5,7 +5,7 @@
       <span>Alertify</span>
     </a>    
     <div class="menu-items d-flex flex-column align-items-center justify-content-center">
-      <div class="notification text-light" [ngClass]="{'active': isActive('/home')}" [routerLink]="['/home']" style="cursor: pointer;">
+      <div class="notification text-light" [ngClass]="{'active': isActive('/user-profile')}" [routerLink]="['/user-profile']" style="cursor: pointer;">
         <i class="bi bi-person-circle"></i>
         <span class="notification-text">Profile</span>
       </div>
@@ -15,7 +15,7 @@
         <span class="notification-text">View Alerts</span>
       </div>
   
-      <div class="notification text-light" [ngClass]="{'active': isActive('/incident-report')}" [routerLink]="['/incident-report']" style="cursor: pointer;">
+      <div class="notification text-light" [ngClass]="{'active': isActive('/accident-report')}" [routerLink]="['/accident-report']" style="cursor: pointer;">
         <i class="bi bi-file-earmark-text"></i>
         <span class="notification-text">View Incident Report</span>
       </div>
@@ -24,11 +24,11 @@
         <i class="bi bi-journal-arrow-up"></i>
         <span class="notification-text">Report an Incident</span>
       </div>
-      <div class="notification text-light" [ngClass]="{'active': isActive('/home')}" [routerLink]="['/home']" style="cursor: pointer;">
+      <div class="notification text-light" [ngClass]="{'active': isActive('/sos-page')}" [routerLink]="['/sos-page']" style="cursor: pointer;">
         <i class="bi bi-exclamation-triangle-fill"></i>
         <span class="notification-text">SOS emergency</span>
       </div>
-      <div class="notification text-light" [ngClass]="{'active': isActive('/home')}" [routerLink]="['/home']" style="cursor: pointer;">
+      <div class="notification text-light" [ngClass]="{'active': isActive('/landing-page')}" [routerLink]="['/landing-page']" style="cursor: pointer;">
         <i class="bi bi-box-arrow-right"></i>
         <span class="notification-text">LogOut</span>
       </div>

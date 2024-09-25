@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { UserDashboardComponent } from './components/user-components/user-dashboard/user-dashboard.component';
-
 @Component({
   selector: 'app-root',
   standalone: true,

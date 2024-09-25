@@ -6,7 +6,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { SosPageComponent } from './components/sos-page/sos-page.component';
 import { ReportIncidentComponent } from './components/user-components/report-incident/report-incident.component';
 import { UserDashboardComponent } from './components/user-components/user-dashboard/user-dashboard.component';
-
+import { AccidentReportComponent } from './components/accident-report/accident-report.component';
+import { UserProfileComponent } from './components/user-components/user-profile/user-profile.component';
 export const routes: Routes = [
     { path: '', redirectTo: '/landing-page', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
@@ -15,5 +16,7 @@ export const routes: Routes = [
     { path: 'user-dashboard', component: UserDashboardComponent },
     { path: 'sos-page', component: SosPageComponent },
     {path:'alerts',component:AlertsComponent},
-    {path:'report-incident',component:ReportIncidentComponent}
+    {path:'report-incident',component:ReportIncidentComponent},
+    {path:'accident-report',component:AccidentReportComponent},
+    {path:'user-profile',component:UserProfileComponent}
 ];
