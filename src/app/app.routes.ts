@@ -19,8 +19,6 @@ export const routes: Routes = [
     { path: 'landing-page', component: LandingPageComponent },
     { path: 'user-dashboard', component: UserDashboardComponent },
     { path: 'sos-page', component: SosPageComponent },
-    {path:'alerts',component:AlertsComponent},
-    {path:'report-incident',component:ReportIncidentComponent},
     {path:'accident-report',component:AccidentReportComponent},
     {path:'user-profile',component:UserProfileComponent},
     { path:'alerts',component:AlertsComponent},
