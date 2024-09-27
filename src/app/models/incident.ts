@@ -8,7 +8,7 @@
   
 
 export interface Incident {
-  incident_id: string;
+  id: string;
   user_id: number;
   location: string;
   time: Date;

@@ -19,7 +19,7 @@
 //     return this.http.get<Incident[]>(this.apiUrl);
 //   }
 // }
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Incident } from '../models/incident';
@@ -28,13 +28,17 @@ import { Incident } from '../models/incident';
   providedIn: 'root'
 })
 export class IncidentService {
-  private apiUrl = 'http://localhost:8080/api/v1/incidents';  // Adjust the URL as needed
+  private apiUrl = 'http://localhost:8100/api/v1/incidents';  // Adjust the URL as needed
 
   constructor(private http: HttpClient) { }
 
   // Method to report an incident
   reportIncident(incident: Incident): Observable<any> {
-    return this.http.post(this.apiUrl, incident);
+    return this.http.post(this.apiUrl, incident, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    });
   }
 
   // Method to fetch all incidents

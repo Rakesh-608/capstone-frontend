@@ -50,7 +50,7 @@ import { UserNavbarComponent } from '../user-navbar/user-navbar.component';
 export class ReportIncidentComponent {
 
   incident: Incident = {
-    incident_id: '0',          // Default value, might be auto-generated on the backend
+    id: '0',          // Default value, might be auto-generated on the backend
     user_id: 1234567890,       // Example user ID, replace with the actual user ID
     location: '',
     time: new Date(),

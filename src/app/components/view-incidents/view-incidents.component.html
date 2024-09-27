@@ -15,7 +15,7 @@
 
 <app-user-navbar></app-user-navbar>
 <div class="incident-cards">
-  <div *ngFor="let incident of incidents" class="card" (click)="viewIncidentDetails(incident.incident_id)">
+  <div *ngFor="let incident of incidents" class="card" (click)="viewIncidentDetails(incident.id)">
     <div class="card-body">
       <!-- Small font for user ID and dateOfPosted -->
       <p class="small-text">Posted by User ID: {{ incident.user_id }} on {{ incident.dateOfPosted | date:'short' }}</p>
