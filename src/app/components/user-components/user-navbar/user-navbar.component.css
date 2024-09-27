@@ -17,6 +17,12 @@
   box-sizing: border-box; /* Ensure padding doesn't add to total height */
 }
 
+/* Adjust content wrapper margin for sidebar */
+.content-wrapper {
+  margin-left: 230px; /* Adjust for static sidebar width */
+  transition: margin-left 0.3s ease-in-out;
+}
+
 /* Button/Link hover effect */
 #sidebar .notification {
   margin-top: 10px; /* Reduce top margin to move buttons closer to each other */
@@ -72,8 +78,4 @@ a {
   color: #f0f0f0; /* Slightly lighter color on hover */
 }
 
-/* Adjust content wrapper margin for sidebar */
-.content-wrapper {
-  margin-left: 230px; /* Adjust for static sidebar width */
-  transition: margin-left 0.3s ease-in-out;
-}
+
