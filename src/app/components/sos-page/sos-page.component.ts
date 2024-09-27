@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { UserNavbarComponent } from '../user-components/user-navbar/user-navbar.component';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { CommonModule, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-sos-page',
   standalone: true,
-  imports: [UserNavbarComponent,FormsModule],
+  imports: [UserNavbarComponent,FormsModule, CommonModule],
   templateUrl: './sos-page.component.html',
   styleUrl: './sos-page.component.css'
 })

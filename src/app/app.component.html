@@ -1,6 +1,4 @@
-<div class="app-layout">
-     <!-- Sidebar component -->
-    <div class="content-wrapper">
-      <router-outlet></router-outlet> <!-- Main content area -->
-    </div>
+<app-user-navbar *ngIf="!isLandingPage"></app-user-navbar> <!-- Show sidebar only if not on landing page -->
+<div class="content-wrapper">
+  <router-outlet></router-outlet> <!-- This will load the appropriate component based on the route -->
 </div>
