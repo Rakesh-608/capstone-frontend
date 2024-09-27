@@ -8,7 +8,7 @@ import { Alert } from '../models/alert';
 })
 export class AlertService {
 
-  private baseUrl = 'http://localhost:8080/api/alerts';  // Your backend API
+  private baseUrl = 'http://localhost:8080/api/v1/alerts';  // Your backend API
 
   constructor(private http: HttpClient) { }
 

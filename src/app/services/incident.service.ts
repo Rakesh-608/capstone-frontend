@@ -28,7 +28,7 @@ import { Incident } from '../models/incident';
   providedIn: 'root'
 })
 export class IncidentService {
-  private apiUrl = 'http://localhost:8080/api/incidents';  // Adjust the URL as needed
+  private apiUrl = 'http://localhost:8080/api/v1/incidents';  // Adjust the URL as needed
 
   constructor(private http: HttpClient) { }
 
