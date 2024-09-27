@@ -13,13 +13,25 @@ import { UserNavbarComponent } from './components/user-components/user-navbar/us
 })
 export class AppComponent {
   title = 'frontend';
-  isLandingPage: boolean = true;
+  isHiddenNavbar: boolean = false;
 
-  constructor(private router: Router) {
-    this.router.events.subscribe(event => {
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    // Initialize isHiddenNavbar based on the current route
+    this.updateNavbarVisibility(this.router.url);
+
+    // Subscribe to route changes
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.isLandingPage = event.url === '/landing-page'; // Adjust '/landing' to your actual landing page route
+        this.updateNavbarVisibility(event.url);
       }
     });
+  }
+
+  // Function to update the navbar visibility based on the current route
+  private updateNavbarVisibility(url: string) {
+    const hiddenRoutes = ['/', '/login', '/register','/landing-page']; // Add your hidden routes here
+    this.isHiddenNavbar = hiddenRoutes.includes(url);
   }
 }
