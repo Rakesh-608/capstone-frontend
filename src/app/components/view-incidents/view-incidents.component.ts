@@ -23,7 +23,7 @@ export class ViewIncidentsComponent implements OnInit {
   ngOnInit(): void {
     this.incidents = [
       {
-        incident_id: '1',
+        id: '1',
         user_id: 1001,
         location: 'New York, USA',
         time: new Date('2023-09-01T10:00:00'),
@@ -33,7 +33,7 @@ export class ViewIncidentsComponent implements OnInit {
         dateOfPosted: new Date('2023-09-01T09:00:00')
       },
       {
-        incident_id: '2',
+        id: '2',
         user_id: 1002,
         location: 'Berlin, Germany',
         time: new Date('2023-09-15T08:30:00'),
@@ -43,7 +43,7 @@ export class ViewIncidentsComponent implements OnInit {
         dateOfPosted: new Date('2023-09-15T07:30:00')
       },
       {
-        incident_id: '3',
+        id: '3',
         user_id: 1003,
         location: 'Tokyo, Japan',
         time: new Date('2023-09-20T16:00:00'),
