@@ -1,7 +1,6 @@
 .content-wrapper {
-    margin-left: 230px; /* Adjust for static sidebar width */
-    padding: 20px; /* Add padding to your content */
-    height: 100vh; /* Full viewport height */
-    overflow-y: auto; /* Add scroll if content overflows */
+    margin-left: 230px; 
+    padding: 20px; 
+    height: 100vh; 
+    overflow-y: auto; 
   }
-  
