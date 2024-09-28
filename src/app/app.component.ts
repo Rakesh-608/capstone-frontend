@@ -14,73 +14,25 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent {
   title = 'frontend';
-  isLandingPage: boolean = true;
+  isHiddenNavbar: boolean = false;
 
-  constructor(private router: Router) {
-    this.router.events.subscribe(event => {
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    // Initialize isHiddenNavbar based on the current route
+    this.updateNavbarVisibility(this.router.url);
+
+    // Subscribe to route changes
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.isLandingPage = event.url === '/landing-page'; // Adjust '/landing' to your actual landing page route
+        this.updateNavbarVisibility(event.url);
       }
     });
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  // isLoggedIn: boolean = false;
-
-  // constructor(private userService: UserService, private renderer: Renderer2) {}
-
-  // // ngOnInit(): void {
-  // //   // Subscribe to the observable and update isLoggedIn accordingly
-  // //   this.userService.isLoggedIn().subscribe(
-  // //     (loggedIn: boolean) => {
-  // //       this.isLoggedIn = loggedIn;
-  // //     },
-  // //     (error) => {
-  // //       console.error('Error checking login status', error);
-  // //     }
-  // //   );
-  // // }
-
-  // ngOnInit(): void {
-  //   // Subscribe to the observable and update isLoggedIn accordingly
-  //   this.userService.isLoggedIn().subscribe(
-  //     (loggedIn: boolean) => {
-  //       this.isLoggedIn = loggedIn;
-  //       // Add or remove CSS class based on the login status
-  //       if (loggedIn) {
-  //         this.renderer.addClass(document.body, 'with-navbar');
-  //         this.renderer.removeClass(document.body, 'no-navbar');
-  //       } else {
-  //         this.renderer.addClass(document.body, 'no-navbar');
-  //         this.renderer.removeClass(document.body, 'with-navbar');
-  //       }
-  //     },
-  //     (error) => {
-  //       console.error('Error checking login status', error);
-  //     }
-  //   );
-  // }
+  // Function to update the navbar visibility based on the current route
+  private updateNavbarVisibility(url: string) {
+    const hiddenRoutes = ['/', '/login', '/register','/landing-page']; // Add your hidden routes here
+    this.isHiddenNavbar = hiddenRoutes.includes(url);
+  }
 }
