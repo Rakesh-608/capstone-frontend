@@ -13,6 +13,11 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
+  userId="";
+  userEmail="";
+  user={};
+
+
   getUsers(): Observable<Person[]> {
     return this.http.get<Person[]>(this.apiUrl);
   }
@@ -65,10 +70,19 @@ export class UserService {
         'Content-Type': 'application/json',
       }),
     }).pipe(
-      catchError(error => {
-        console.error('Login failed:', error);
-        return throwError('Something went wrong with login; please try again later.');
-      })
+      
+      // catchError(error => {
+      //   console.error('Login failed:', error);
+      //   return throwError('Something went wrong with login; please try again later.');
+      // })
+      map(response => {
+        // Assuming the response contains user data, including userId
+        // localStorage.setItem('userId', response.id); 
+         // Store userId in localStorage
+         this.userEmail=email;
+        return response;
+      }),
+      catchError(this.handleError)
     );
   }
 
@@ -76,6 +90,7 @@ export class UserService {
     return this.http.post(`${this.apiUrl}/logout`, {}, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     });
+    this.userEmail="";
   }
 
   private handleError(error: HttpErrorResponse) {

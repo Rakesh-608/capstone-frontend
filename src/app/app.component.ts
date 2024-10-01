@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { Router, NavigationEnd } from '@angular/router'; // Import Router and NavigationEnd
 import { UserNavbarComponent } from './components/user-components/user-navbar/user-navbar.component';
+import { UserService } from './services/user.service';
 @Component({
   selector: 'app-root',
   standalone: true,
